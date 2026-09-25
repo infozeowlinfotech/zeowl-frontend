@@ -2,6 +2,9 @@ import React from 'react';
 import TechOrbit from '@/components/TechOrbit';
 import RotatingText from '@/components/RotatingText';
 import ServicesSection from '@/components/ServicesSection';
+import HowWeWorkSection from '@/components/HowWeWorkSection';
+import TechnologyExpertise from '@/components/TechnologyExpertise';
+import OurWorkSection from '@/components/OurWorkSection';
 
 export default function Page() {
   return (
@@ -125,7 +128,7 @@ export default function Page() {
             <div className="relative w-full aspect-square flex items-center justify-center max-w-[500px] mx-auto scale-90 lg:scale-100">
               {/* Orbital Rings */}
               <div className="absolute inset-0 m-auto w-[90%] h-[90%] border border-[#EEF1F4] rounded-full"></div>
-              <div className="absolute inset-0 m-auto w-[65%] h-[65%] border border-[#EEF1F4] border-dashed rounded-full animate-[spin_40s_linear_infinite]"></div>
+              <div className="absolute inset-0 m-auto w-[65%] h-[65%] border-2 border-[#E2E8F0] border-dashed rounded-full animate-[spin_40s_linear_infinite]"></div>
               <div className="absolute inset-0 m-auto w-[36%] h-[36%] bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex items-center justify-center border border-[#EEF1F4]/50 z-10">
                 <img src="/logo/ZEOWL.png" alt="Zeowl" className="h-24 w-auto object-contain" />
               </div>
@@ -202,101 +205,15 @@ export default function Page() {
             </div>
           </div>
 
-          {/* OUR PROCESS PANEL - Compact */}
-          <div className="flex flex-col lg:flex-row items-center gap-8 pt-6 border-t border-[#EEF1F4]">
 
-            <div className="flex-shrink-0 pr-6">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-[2px] bg-[#FF7A18]"></div>
-                <span className="text-[#FF7A18] uppercase tracking-wider text-xs font-bold">OUR PROCESS</span>
-              </div>
-              <h3 className="text-[#071A35] font-black text-3xl leading-[1.1] tracking-tight">
-                FROM IDEA<br />TO IMPACT
-              </h3>
-            </div>
-
-            <div className="flex-1 w-full flex items-center justify-center gap-6 lg:gap-10 relative">
-              {/* Connecting Line */}
-              <div className="absolute top-6 left-10 right-10 h-px bg-[#EEF1F4] z-0"></div>
-
-              {/* IDEA */}
-              <div className="relative z-10 flex flex-col items-center text-center gap-2.5 w-16">
-                <div className="w-12 h-12 rounded-full bg-[#FCFBF9] border-2 border-[#EEF1F4] shadow-sm flex items-center justify-center text-[#EEF1F4] animate-process-node" style={{ animationDelay: '0s' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18h6" /><path d="M10 22h4" /><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" /></svg>
-                </div>
-                <div>
-                  <div className="text-[#071A35] font-bold text-[10px]">IDEA</div>
-                  <div className="text-[#566579] text-[8px] leading-tight">Understand your vision</div>
-                </div>
-              </div>
-
-              <div className="relative z-10 bg-[#FCFBF9] px-1 hidden md:block animate-process-arrow" style={{ animationDelay: '0.5s', top: '-14px' }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
-              </div>
-
-              {/* DESIGN */}
-              <div className="relative z-10 flex flex-col items-center text-center gap-2.5 w-16">
-                <div className="w-12 h-12 rounded-full bg-[#FCFBF9] border-2 border-[#EEF1F4] shadow-sm flex items-center justify-center text-[#EEF1F4] animate-process-node" style={{ animationDelay: '2s' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 19l7-7 3 3-7 7-3-3z" /><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" /><path d="M2 2l7.586 7.586" /></svg>
-                </div>
-                <div>
-                  <div className="text-[#071A35] font-bold text-[10px]">DESIGN</div>
-                  <div className="text-[#566579] text-[8px] leading-tight">Craft the right solution</div>
-                </div>
-              </div>
-
-              <div className="relative z-10 bg-[#FCFBF9] px-1 hidden md:block animate-process-arrow" style={{ animationDelay: '2.5s', top: '-14px' }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
-              </div>
-
-              {/* DEVELOP */}
-              <div className="relative z-10 flex flex-col items-center text-center gap-2.5 w-16">
-                <div className="w-12 h-12 rounded-full bg-[#FCFBF9] border-2 border-[#EEF1F4] shadow-sm flex items-center justify-center text-[#EEF1F4] animate-process-node" style={{ animationDelay: '4s' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
-                </div>
-                <div>
-                  <div className="text-[#071A35] font-bold text-[10px]">DEVELOP</div>
-                  <div className="text-[#566579] text-[8px] leading-tight">Build with precision</div>
-                </div>
-              </div>
-
-              <div className="relative z-10 bg-[#FCFBF9] px-1 hidden md:block animate-process-arrow" style={{ animationDelay: '4.5s', top: '-14px' }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
-              </div>
-
-              {/* LAUNCH */}
-              <div className="relative z-10 flex flex-col items-center text-center gap-2.5 w-16">
-                <div className="w-12 h-12 rounded-full bg-[#FCFBF9] border-2 border-[#EEF1F4] shadow-sm flex items-center justify-center text-[#EEF1F4] animate-process-node" style={{ animationDelay: '6s' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg>
-                </div>
-                <div>
-                  <div className="text-[#071A35] font-bold text-[10px]">LAUNCH</div>
-                  <div className="text-[#566579] text-[8px] leading-tight">Bring ideas to life</div>
-                </div>
-              </div>
-
-              <div className="relative z-10 bg-[#FCFBF9] px-1 hidden md:block animate-process-arrow" style={{ animationDelay: '6.5s', top: '-14px' }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
-              </div>
-
-              {/* GROW */}
-              <div className="relative z-10 flex flex-col items-center text-center gap-2.5 w-16">
-                <div className="w-12 h-12 rounded-full bg-[#FCFBF9] border-2 border-[#EEF1F4] shadow-sm flex items-center justify-center text-[#EEF1F4] animate-process-node" style={{ animationDelay: '8s' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
-                </div>
-                <div>
-                  <div className="text-[#071A35] font-bold text-[10px]">GROW</div>
-                  <div className="text-[#566579] text-[8px]">Scale for a better tomorrow</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
 
         </div>
       </section>
 
       <ServicesSection />
+      <HowWeWorkSection />
+      <TechnologyExpertise />
+      <OurWorkSection />
     </>
   );
 }
