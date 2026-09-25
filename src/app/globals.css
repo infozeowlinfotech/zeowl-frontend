@@ -2,21 +2,115 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #06182f;
+  --brand-orange: #f57e20;
+  --brand-navy: #06182f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-navy: var(--brand-navy);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Keeping the same theme for both dark and light modes for now as requested */
+    --background: #ffffff;
+    --foreground: #06182f;
   }
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes processNode {
+  0%, 15% {
+    border-color: #FF7A18;
+    box-shadow: 0 0 15px rgba(255, 122, 24, 0.4);
+    transform: scale(1.15);
+    color: #FF7A18;
+  }
+  20%, 100% {
+    border-color: #EEF1F4;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transform: scale(1);
+    color: #EEF1F4;
+  }
+}
+
+@keyframes processArrow {
+  0%, 5% {
+    opacity: 0.2;
+    transform: translateX(-5px);
+  }
+  10%, 15% {
+    opacity: 1;
+    transform: translateX(5px);
+    color: #FF7A18;
+  }
+  20%, 100% {
+    opacity: 0.2;
+    transform: translateX(0);
+    color: #EEF1F4;
+  }
+}
+
+.animate-process-node {
+  animation: processNode 10s infinite;
+  transition: all 0.3s ease;
+}
+
+.animate-process-arrow {
+  animation: processArrow 10s infinite;
+  opacity: 0.2;
+}
+
+@keyframes float-handwriting {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+.animate-handwriting {
+  animation: float-handwriting 4s ease-in-out infinite;
 }
 
 body {
